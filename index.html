@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="card">
+        <h2 class="title">Weather App</h2>
+        <div class="search">
+            <input type="text" placeholder="City Name" id="cityName" spellcheck="false">
+            <button onclick="searchWeather()"><img src="images/search.png" alt=""></button>
+        </div>
+        <div id="error">
+            Invalid city names
+        </div>
+        <div class="weather" id="weatherInfo">
+            <button id="prepareTable" onclick="prepareTable(this.id)">History</button>
+            <h2 class="weather_status">--------</h2>
+            <img src="images/rain.png" alt="" srcset="" class="weather_icon" id="weatherImg">
+            <h2 class="temp">--°C </h2>
+            <h2 class="city">--------</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="" srcset="">
+                    <div>
+                        <p class="humidity">--%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="" srcset="">
+                    <div>
+                        <p class="wind">-- km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="" id="weatherTable">
+            <div class="btn-pannel">
+                <button id="hideTable" class="btn-back" onclick="prepareTable(this.id)">&#8656;</button>
+                <button id="" class="btn-clear" onclick="historyDelete(this.id)">clear history</button>
+            </div>
+            <table id="historyTable">
+
+                <tr>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>Temp </th>
+                    <th>Humidity</th>
+                    <th> Wind</th>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
